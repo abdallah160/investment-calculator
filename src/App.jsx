@@ -10,6 +10,8 @@ function App() {
     expectedReturn: '',
     duration: ''
   });
+
+  let inputIsValid = (Number(fullInput.duration >= 1));
   function handleInputChange(e) {
     setfullInput((prevValue) => {
       return {
@@ -23,7 +25,7 @@ function App() {
     <>
       <Header />
       <InputArea handleInputChange={handleInputChange} />
-      <Result fullInput={fullInput} />
+      {inputIsValid ? <Result fullInput={fullInput} /> : <p className="center">Please fill all data and enter a positive duration</p>}
     </>
   )
 }

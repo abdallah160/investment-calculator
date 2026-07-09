@@ -19,7 +19,7 @@ export default function InputArea({ handleInputChange }) {
                     <input type="number" onChange={handleInputChange} name="expectedReturn"></input>
                 </p>
                 <p>
-                    <label>Duration</label>
+                    <label>Duration (Years)</label>
                     <input type="number" onChange={handleInputChange} name="duration"></input>
                 </p>
             </div>
